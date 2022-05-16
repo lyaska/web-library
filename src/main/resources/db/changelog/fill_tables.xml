@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="achepurko" id="fill_authors">
+        <insert tableName="authors">
+            <column name="id" value="6d92c138-7805-47c8-a1ed-ced320ff022e"/>
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Иванов"/>
+            <column name="patronymic" value="Иванович"/>
+        </insert>
+        <insert tableName="authors">
+            <column name="id" value="06b12b9a-0469-4bad-a4ed-6260e1f91396"/>
+            <column name="name" value="Арсений"/>
+            <column name="surname" value="Арсеньев"/>
+            <column name="patronymic" value="Арсеньевич"/>
+        </insert>
+    </changeSet>
+    <changeSet author="achepurko" id="fill_books">
+        <insert tableName="books">
+            <column name="id" value="6d33c228-7805-47c8-a1ed-ced320ff022e"/>
+            <column name="release_date" value="2020-05-12"/>
+            <column name="name" value="Book_1"/>
+            <column name="author" value="06b12b9a-0469-4bad-a4ed-6260e1f91396"/>
+            <column name="is_private" value="false"/>
+        </insert>
+        <insert tableName="books">
+            <column name="id" value="66b12b9a-0547-4bad-a4ed-6261e1f91396"/>
+            <column name="release_date" value="2019-08-17"/>
+            <column name="name" value="Book_2"/>
+            <column name="author" value="06b12b9a-0469-4bad-a4ed-6260e1f91396"/>
+            <column name="is_private" value="true"/>
+        </insert>
+        <insert tableName="books">
+            <column name="id" value="7f916251-c36b-49b3-ab7f-f559f3aca069"/>
+            <column name="release_date" value="2012-11-28"/>
+            <column name="name" value="Book_3"/>
+            <column name="author" value="6d92c138-7805-47c8-a1ed-ced320ff022e"/>
+            <column name="is_private" value="false"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
